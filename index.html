@@ -1,0 +1,990 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Vastu - Expert Vastu Consultation</title>
+  <meta name="description" content="Transform your space with expert Vastu guidance. Simple, practical solutions for home, office, and business. Free consultation available.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            saffron: {
+              50: '#FFF8E7',
+              100: '#FFEFC7',
+              200: '#FFE0A3',
+              300: '#FFD180',
+              400: '#FFC157',
+              500: '#FF9800',
+              600: '#F57C00',
+              700: '#E65100',
+            },
+            earthy: {
+              100: '#F5E6D3',
+              200: '#E8D4BE',
+              300: '#D4B896',
+              400: '#B8956A',
+              500: '#8B6914',
+            },
+            text: {
+              primary: '#2D2A26',
+              secondary: '#4A4541',
+              muted: '#6B6560',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #FFFAF3;
+      margin: 0;
+      padding: 0;
+    }
+    html { scroll-behavior: smooth; }
+    ::selection {
+      background: #FFE0A3;
+      color: #2D2A26;
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(255, 224, 163, 0.6) 0%, rgba(255, 239, 199, 0.5) 25%, rgba(255, 248, 231, 0.4) 50%, rgba(255, 250, 243, 0.6) 75%, rgba(255, 248, 235, 1) 100%);
+    }
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255, 193, 87, 0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(255, 152, 0, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .btn-saffron {
+      background: linear-gradient(135deg, #FF9800 0%, #F57C00 100%);
+      color: white;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.875rem 1.75rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+    }
+    .btn-saffron:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
+    }
+    .btn-primary {
+      background: #2D2A26;
+      color: white;
+      border: none;
+      border-radius: 2rem;
+      padding: 0.875rem 1.75rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .btn-primary:hover {
+      background: #4A4541;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(45, 42, 38, 0.2);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.3);
+      color: #2D2A26;
+      border: 1px solid rgba(212, 197, 176, 0.3);
+      border-radius: 2rem;
+      padding: 0.875rem 1.75rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      text-decoration: none;
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.5);
+      border-color: #FFC157;
+      transform: translateY(-2px);
+    }
+    .card-warm {
+      background: #FFFFFF;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(139, 105, 20, 0.06);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(212, 197, 176, 0.4);
+    }
+    .card-warm:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(139, 105, 20, 0.12);
+    }
+    .card-accent {
+      background: #FFF8E7;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid #FFEFC7;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1px solid #D4C5B0;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      background: white;
+      color: #2D2A26;
+      transition: all 0.2s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #FF9800;
+      box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.15);
+    }
+    .form-input::placeholder { color: #6B6560; }
+    .decorative-circle {
+      position: absolute;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #FFE0A3 0%, #FFEFC7 100%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+  </style>
+</head>
+<body class="font-poppins">
+  <!-- Header -->
+  <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#" class="flex items-center gap-2">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-saffron-400 to-saffron-600 flex items-center justify-center">
+            <span class="text-white font-bold text-lg">O</span>
+          </div>
+          <span class="text-xl font-semibold text-text-primary">Orbital Vastu</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-text-secondary hover:text-saffron-600 transition-colors font-medium">Services</a>
+          <a href="#about" class="text-text-secondary hover:text-saffron-600 transition-colors font-medium">About</a>
+          <a href="#process" class="text-text-secondary hover:text-saffron-600 transition-colors font-medium">Process</a>
+          <a href="#contact" class="text-text-secondary hover:text-saffron-600 transition-colors font-medium">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-4">
+          <a href="tel:+918200219142" class="btn-saffron">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            Call Now
+          </a>
+        </div>
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-saffron-50 transition-colors" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <svg class="w-6 h-6 text-text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-saffron-100 bg-white/95 backdrop-blur-lg">
+        <nav class="flex flex-col gap-2">
+          <a href="#services" class="px-4 py-3 text-text-secondary hover:text-saffron-600 hover:bg-saffron-50 rounded-lg transition-colors font-medium">Services</a>
+          <a href="#about" class="px-4 py-3 text-text-secondary hover:text-saffron-600 hover:bg-saffron-50 rounded-lg transition-colors font-medium">About</a>
+          <a href="#process" class="px-4 py-3 text-text-secondary hover:text-saffron-600 hover:bg-saffron-50 rounded-lg transition-colors font-medium">Process</a>
+          <a href="#contact" class="px-4 py-3 text-text-secondary hover:text-saffron-600 hover:bg-saffron-50 rounded-lg transition-colors font-medium">Contact</a>
+          <div class="px-4 pt-4 border-t border-saffron-100 mt-2">
+            <a href="tel:+918200219142" class="btn-saffron w-full">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              Call Now
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20 relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div class="text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 bg-white/50 backdrop-blur-sm border border-saffron-200 rounded-full px-4 py-2 mb-6 animate-fade-in-up">
+              <span class="w-2 h-2 bg-saffron-500 rounded-full animate-pulse"></span>
+              <span class="text-sm font-medium text-text-secondary">2+ Years of Expertise</span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold text-text-primary mb-6 leading-tight animate-fade-in-up" style="animation-delay: 0.1s">
+              Transform Your Space with
+              <span class="block text-saffron-600">Expert Vastu Guidance</span>
+            </h1>
+            <p class="text-lg text-text-secondary mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s">
+              Simple, practical Vastu solutions for your home, office, or business. No complex rituals. No unnecessary demolitions. Just effective guidance that brings harmony and prosperity.
+            </p>
+            <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-8 animate-fade-in-up" style="animation-delay: 0.3s">
+              <div class="flex items-center gap-2 text-text-secondary">
+                <svg class="w-5 h-5 text-saffron-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-sm font-medium">Free Consultation</span>
+              </div>
+              <div class="flex items-center gap-2 text-text-secondary">
+                <svg class="w-5 h-5 text-saffron-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-sm font-medium">No Demolition Needed</span>
+              </div>
+              <div class="flex items-center gap-2 text-text-secondary">
+                <svg class="w-5 h-5 text-saffron-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-sm font-medium">Online Available</span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style="animation-delay: 0.4s">
+              <a href="https://wa.me/918200219142?text=Hi, I'm interested in Vastu consultation." target="_blank" rel="noopener noreferrer" class="btn-saffron text-base py-4 px-8">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Consultation
+              </a>
+              <a href="tel:+918200219142" class="btn-secondary text-base py-4 px-8">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                Call: +91 8200219142
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="card-warm p-6 text-center animate-fade-in-up" style="animation-delay: 0.3s">
+                <div class="text-3xl sm:text-4xl font-bold text-saffron-600 mb-2">2+</div>
+                <div class="text-sm text-text-muted font-medium">Years of Experience</div>
+              </div>
+              <div class="card-warm p-6 text-center mt-8 animate-fade-in-up" style="animation-delay: 0.4s">
+                <div class="text-3xl sm:text-4xl font-bold text-saffron-600 mb-2">60+</div>
+                <div class="text-sm text-text-muted font-medium">Happy Clients</div>
+              </div>
+              <div class="card-warm p-6 text-center animate-fade-in-up" style="animation-delay: 0.5s">
+                <div class="text-3xl sm:text-4xl font-bold text-saffron-600 mb-2">100%</div>
+                <div class="text-sm text-text-muted font-medium">Practical Solutions</div>
+              </div>
+              <div class="card-warm p-6 text-center mt-8 animate-fade-in-up" style="animation-delay: 0.6s">
+                <div class="text-3xl sm:text-4xl font-bold text-saffron-600 mb-2">Free</div>
+                <div class="text-sm text-text-muted font-medium">Initial Consultation</div>
+              </div>
+            </div>
+            <div class="decorative-circle absolute -top-10 -right-10 w-32 h-32 opacity-30 animate-float"></div>
+            <div class="decorative-circle absolute -bottom-5 -left-5 w-20 h-20 opacity-20"></div>
+          </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
+          <a href="#about" class="flex flex-col items-center gap-2 text-text-muted">
+            <span class="text-xs font-medium uppercase tracking-wider">Explore</span>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-saffron-600 uppercase tracking-wider mb-4">About Orbital Vastu</span>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-text-primary mb-6 leading-tight">
+              Making Vastu Simple &<br>
+              <span class="text-saffron-600">Accessible for Everyone</span>
+            </h2>
+            <p class="text-lg text-text-secondary mb-6 leading-relaxed">
+              Based in Delhi, Orbital Vastu has been helping homeowners, business owners, and NRIs create harmonious spaces.
+            </p>
+            <p class="text-text-secondary mb-8 leading-relaxed">
+              We understand that not everyone knows about Vastu – and that's perfectly okay. Our approach is to guide you step by step, explaining the 'why' behind every recommendation, so you can make informed decisions about your space.
+            </p>
+            <div class="flex items-center gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-saffron-600">2+</div>
+                <div class="text-sm text-text-muted">Years Experience</div>
+              </div>
+              <div class="w-px h-12 bg-saffron-100"></div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-saffron-600">60+</div>
+                <div class="text-sm text-text-muted">Happy Clients</div>
+              </div>
+              <div class="w-px h-12 bg-saffron-100"></div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-saffron-600">Pan India</div>
+                <div class="text-sm text-text-muted">& NRI Clients</div>
+              </div>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="card-accent group hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-saffron-200 flex items-center justify-center mb-4 group-hover:bg-saffron-300 transition-colors">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">Practical Approach</h3>
+              <p class="text-sm text-text-muted leading-relaxed">We believe in solutions that work without turning your life upside down. No expensive rituals, no unnecessary changes.</p>
+            </div>
+            <div class="card-accent group hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-saffron-200 flex items-center justify-center mb-4 group-hover:bg-saffron-300 transition-colors">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+              </div>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">Simple Explanations</h3>
+              <p class="text-sm text-text-muted leading-relaxed">Vastu doesn't have to be complicated. We explain everything in simple terms that anyone can understand.</p>
+            </div>
+            <div class="card-accent group hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-saffron-200 flex items-center justify-center mb-4 group-hover:bg-saffron-300 transition-colors">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">Trusted Expertise</h3>
+              <p class="text-sm text-text-muted leading-relaxed">With 2+ years of dedicated practice and satisfied clients, your space is in knowledgeable hands.</p>
+            </div>
+            <div class="card-accent group hover:shadow-lg transition-all duration-300">
+              <div class="w-12 h-12 rounded-xl bg-saffron-200 flex items-center justify-center mb-4 group-hover:bg-saffron-300 transition-colors">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+              </div>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">Modern Solutions</h3>
+              <p class="text-sm text-text-muted leading-relaxed">Traditional wisdom meets modern living. Our remedies fit seamlessly into contemporary lifestyles.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 lg:py-28" style="background: rgba(255, 248, 235, 0.8);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block text-sm font-semibold text-saffron-600 uppercase tracking-wider mb-4">Our Services</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-text-primary mb-4">
+            Vastu Solutions for <span class="text-saffron-600">Every Space</span>
+          </h2>
+          <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+            Whether it's your home, office, or factory – we provide customized Vastu guidance that fits your specific needs and budget.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Home Vastu Consultation</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Transform your home into a space of harmony and positive energy. Get personalized guidance for your residential property.</p>
+          </div>
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Flat / Apartment Vastu</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Optimize your apartment's energy flow with practical Vastu solutions that work within modern living spaces.</p>
+          </div>
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Plot / Land Analysis</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Before you build, understand your land's potential. Get expert guidance on plot selection and orientation.</p>
+          </div>
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Office / Corporate Vastu</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Create a workspace that promotes productivity, growth, and success for your business and team.</p>
+          </div>
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Shop / Commercial Vastu</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Attract more customers and prosperity to your commercial space with strategic Vastu arrangements.</p>
+          </div>
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Factory / Warehouse Vastu</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Ensure smooth operations and growth for your industrial property with specialized Vastu guidance.</p>
+          </div>
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Online Floor Plan Analysis</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Get detailed Vastu analysis of your floor plans remotely. Convenient consultation from anywhere in the world.</p>
+          </div>
+          <div class="card-warm group cursor-pointer">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mb-5 group-hover:from-saffron-200 group-hover:to-saffron-300 transition-all duration-300">
+              <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-3 group-hover:text-saffron-600 transition-colors">Vastu Remedies (No Demolition)</h3>
+            <p class="text-sm text-text-muted leading-relaxed">Simple, practical solutions that don't require breaking walls. Effective remedies using colors, placements, and symbols.</p>
+          </div>
+        </div>
+        <div class="mt-12 text-center">
+          <p class="text-text-muted">
+            Can't find what you're looking for? 
+            <a href="#contact" class="text-saffron-600 hover:underline ml-1 font-medium">Contact us for custom solutions</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Serve Section -->
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block text-sm font-semibold text-saffron-600 uppercase tracking-wider mb-4">Who We Serve</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-text-primary mb-4">
+            Trusted by <span class="text-saffron-600">Diverse Clients</span>
+          </h2>
+          <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+            From first-time homeowners to seasoned industrialists, we've helped people from all walks of life.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="relative p-6 rounded-2xl bg-gradient-to-br from-saffron-50 to-white border border-saffron-100 group hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary mb-2 group-hover:text-saffron-600 transition-colors">Homeowners</h3>
+                <p class="text-sm text-text-muted">Looking to create a peaceful, harmonious living environment for their family.</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative p-6 rounded-2xl bg-gradient-to-br from-saffron-50 to-white border border-saffron-100 group hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary mb-2 group-hover:text-saffron-600 transition-colors">Business Owners</h3>
+                <p class="text-sm text-text-muted">Seeking growth, prosperity, and positive energy in their commercial spaces.</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative p-6 rounded-2xl bg-gradient-to-br from-saffron-50 to-white border border-saffron-100 group hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary mb-2 group-hover:text-saffron-600 transition-colors">Builders & Architects</h3>
+                <p class="text-sm text-text-muted">Wanting to incorporate Vastu principles into new construction projects.</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative p-6 rounded-2xl bg-gradient-to-br from-saffron-50 to-white border border-saffron-100 group hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary mb-2 group-hover:text-saffron-600 transition-colors">NRIs</h3>
+                <p class="text-sm text-text-muted">Indians abroad seeking Vastu guidance for properties back home through online consultation.</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative p-6 rounded-2xl bg-gradient-to-br from-saffron-50 to-white border border-saffron-100 group hover:shadow-lg transition-all duration-300">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-white shadow-sm flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-text-primary mb-2 group-hover:text-saffron-600 transition-colors">Industrialists</h3>
+                <p class="text-sm text-text-muted">Factory and warehouse owners looking for operational harmony and business growth.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 lg:py-28" style="background: rgba(255, 248, 235, 0.8);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block text-sm font-semibold text-saffron-600 uppercase tracking-wider mb-4">How It Works</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-text-primary mb-4">
+            Simple <span class="text-saffron-600">4-Step Process</span>
+          </h2>
+          <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+            Getting started with Vastu consultation is easy. Here's how we work together to transform your space.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-saffron-200 -translate-y-1/2 z-0"></div>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+            <div class="relative">
+              <div class="card-warm text-center h-full">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-saffron-500 text-white text-sm font-bold flex items-center justify-center shadow-lg">1</div>
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mx-auto mb-5 mt-4">
+                  <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-text-primary mb-3">Book Free Consultation</h3>
+                <p class="text-sm text-text-muted">Fill the enquiry form or connect via WhatsApp. Share basic details about your property and concerns.</p>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="card-warm text-center h-full">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-saffron-500 text-white text-sm font-bold flex items-center justify-center shadow-lg">2</div>
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mx-auto mb-5 mt-4">
+                  <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-text-primary mb-3">Initial Discussion</h3>
+                <p class="text-sm text-text-muted">We'll have a complimentary call to understand your needs and explain how Vastu can help you.</p>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="card-warm text-center h-full">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-saffron-500 text-white text-sm font-bold flex items-center justify-center shadow-lg">3</div>
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mx-auto mb-5 mt-4">
+                  <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-text-primary mb-3">Floor Plan Analysis</h3>
+                <p class="text-sm text-text-muted">Share your floor plan for detailed analysis. We study directions, placements, and energy flow.</p>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="card-warm text-center h-full">
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-saffron-500 text-white text-sm font-bold flex items-center justify-center shadow-lg">4</div>
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-saffron-100 to-saffron-200 flex items-center justify-center mx-auto mb-5 mt-4">
+                  <svg class="w-7 h-7 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-lg font-semibold text-text-primary mb-3">Personalized Report</h3>
+                <p class="text-sm text-text-muted">Receive a comprehensive report with practical remedies and recommendations tailored to your space.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <a href="#contact" class="btn-saffron text-base py-4 px-8">
+            Start Your Free Consultation
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block text-sm font-semibold text-saffron-600 uppercase tracking-wider mb-4">Client Reviews</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-text-primary mb-4">
+            What Our <span class="text-saffron-600">Clients Say</span>
+          </h2>
+          <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+            Real experiences from real people who transformed their spaces with our guidance.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 mb-16">
+          <!-- Testimonial 1 - Vijaybhai Patel -->
+          <div class="card-warm relative">
+            <div class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-saffron-100 flex items-center justify-center">
+              <svg class="w-5 h-5 text-saffron-600" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <div class="flex gap-1 mb-4 pt-2">
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-text-secondary mb-6 italic leading-relaxed">"Jaimin Joshi's Vastu audit of our engineering plant was highly practical and detailed, especially regarding heavy machinery and fire elements. After implementing his Orbital Vastu corrections, our cash flow improved significantly. He truly understands Rajkot's industrial ecosystem and delivers result-oriented Vastu that makes business sense."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-saffron-100">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-saffron-200 to-saffron-300 flex items-center justify-center">
+                <span class="text-saffron-700 font-semibold text-sm">V</span>
+              </div>
+              <div>
+                <div class="font-semibold text-text-primary text-sm">Vijaybhai Patel</div>
+                <div class="text-xs text-text-muted">Founder, Shanti Engineering Works • Rajkot, Gujarat</div>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 - Pramod Singh -->
+          <div class="card-warm relative">
+            <div class="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-saffron-100 flex items-center justify-center">
+              <svg class="w-5 h-5 text-saffron-600" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            </div>
+            <div class="flex gap-1 mb-4 pt-2">
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <svg class="w-5 h-5 fill-saffron-400 text-saffron-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+            </div>
+            <p class="text-text-secondary mb-6 italic leading-relaxed">"I was very satisfied with Mr. Jaimin's Vastu visit to our hotel. I contacted him to improve customer relations and overall business growth. He suggested a few remedies in the East and North zones of our reception area. The remedies started showing results within just three days. I am very happy to have my Vastu done by him."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-saffron-100">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-saffron-200 to-saffron-300 flex items-center justify-center">
+                <span class="text-saffron-700 font-semibold text-sm">P</span>
+              </div>
+              <div>
+                <div class="font-semibold text-text-primary text-sm">Pramod Singh</div>
+                <div class="text-xs text-text-muted">Owner, Hotel Atlantis Suites • Sigra, Varanasi</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gradient-to-r from-saffron-50 via-white to-saffron-50 rounded-2xl p-8 lg:p-12">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold text-saffron-600 mb-1">2+</div>
+              <div class="text-sm text-text-muted font-medium">Years of Experience</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold text-saffron-600 mb-1">60+</div>
+              <div class="text-sm text-text-muted font-medium">Happy Clients</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold text-saffron-600 mb-1">100%</div>
+              <div class="text-sm text-text-muted font-medium">Practical Solutions</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl lg:text-4xl font-bold text-saffron-600 mb-1">Free</div>
+              <div class="text-sm text-text-muted font-medium">Initial Consultation</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 lg:py-28" style="background: rgba(255, 248, 235, 0.8);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <span class="inline-block text-sm font-semibold text-saffron-600 uppercase tracking-wider mb-4">Pricing</span>
+            <h2 class="text-3xl sm:text-4xl font-semibold text-text-primary mb-6 leading-tight">
+              Transparent &<br>
+              <span class="text-saffron-600">Flexible Pricing</span>
+            </h2>
+            <p class="text-lg text-text-secondary mb-8 leading-relaxed">
+              Every space is unique, and so are your needs. We discuss pricing during our initial consultation based on your specific requirements. No hidden charges, no surprises.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-saffron-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-text-secondary">Complimentary Initial Consultation</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-saffron-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-text-secondary">Detailed Floor Plan Analysis</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-saffron-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-text-secondary">Personalized Recommendations</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-saffron-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-text-secondary">No Demolition Solutions</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-saffron-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-text-secondary">Follow-up Support</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-6 h-6 rounded-full bg-saffron-100 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <span class="text-text-secondary">Online Consultation Available</span>
+              </div>
+            </div>
+            <p class="text-sm text-text-muted italic">* First consultation is completely free with no obligations</p>
+          </div>
+          <div class="card-warm p-8 lg:p-10 text-center bg-gradient-to-br from-white to-saffron-50">
+            <div class="inline-flex items-center gap-2 bg-saffron-100 rounded-full px-4 py-2 mb-6">
+              <span class="text-sm font-semibold text-saffron-700">Start with FREE Consultation</span>
+            </div>
+            <h3 class="text-2xl font-semibold text-text-primary mb-4">Ready to Transform Your Space?</h3>
+            <p class="text-text-secondary mb-8">
+              Let's discuss how Vastu can bring positive changes to your home or business. Book your free consultation today.
+            </p>
+            <div class="space-y-4">
+              <a href="https://wa.me/918200219142?text=Hi, I'm interested in Vastu consultation. I'd like to book a free consultation." target="_blank" rel="noopener noreferrer" class="btn-saffron w-full text-base py-4">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Book via WhatsApp
+              </a>
+              <a href="tel:+918200219142" class="btn-secondary w-full text-base py-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                Call Now: +91 8200219142
+              </a>
+            </div>
+            <p class="text-sm text-text-muted mt-6">Working Hours: 09:00 AM - 08:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block text-sm font-semibold text-saffron-600 uppercase tracking-wider mb-4">Get In Touch</span>
+          <h2 class="text-3xl sm:text-4xl font-semibold text-text-primary mb-4">
+            Start Your <span class="text-saffron-600">Vastu Journey</span>
+          </h2>
+          <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+            Fill out the form below or reach out directly. We typically respond within 24 hours.
+          </p>
+        </div>
+        <div class="grid lg:grid-cols-5 gap-12">
+          <div class="lg:col-span-3">
+            <div class="card-warm p-8">
+              <h3 class="text-xl font-semibold text-text-primary mb-6">Send an Enquiry</h3>
+              <div id="successMessage" class="hidden mb-6 p-4 bg-green-50 border border-green-200 rounded-xl flex items-center gap-3">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-green-700 font-medium">Thank you! We'll get back to you soon.</span>
+              </div>
+              <form id="contactForm" class="space-y-5" onsubmit="handleSubmit(event)">
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Your Name *</label>
+                    <input type="text" name="name" required class="form-input" placeholder="Enter your name">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Phone Number *</label>
+                    <input type="tel" name="phone" required class="form-input" placeholder="+91 XXXXX XXXXX">
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">City *</label>
+                    <input type="text" name="city" required class="form-input" placeholder="Enter your city">
+                  </div>
+                  <div>
+                    <label class="block text-sm font-medium text-text-primary mb-2">Property Type *</label>
+                    <select name="propertyType" required class="form-input cursor-pointer">
+                      <option value="" disabled selected>Select property type</option>
+                      <option value="Home / House">Home / House</option>
+                      <option value="Flat / Apartment">Flat / Apartment</option>
+                      <option value="Plot / Land">Plot / Land</option>
+                      <option value="Office">Office</option>
+                      <option value="Shop / Showroom">Shop / Showroom</option>
+                      <option value="Factory / Warehouse">Factory / Warehouse</option>
+                      <option value="Hotel / Restaurant">Hotel / Restaurant</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-text-primary mb-2">Your Message / Query</label>
+                  <textarea name="message" rows="4" class="form-input resize-none" placeholder="Tell us about your property or any specific concerns..."></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="btn-saffron w-full text-base py-4">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                  <span id="btnText">Submit Enquiry</span>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="lg:col-span-2 space-y-6">
+            <a href="tel:+918200219142" class="card-warm flex items-center gap-4 hover:shadow-lg transition-all duration-300 group">
+              <div class="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              </div>
+              <div>
+                <div class="text-sm text-text-muted">Call Us</div>
+                <div class="font-semibold text-text-primary group-hover:text-saffron-600 transition-colors">+91 8200219142</div>
+              </div>
+            </a>
+            <a href="https://wa.me/918200219142?text=Hi, I'm interested in Vastu consultation." target="_blank" rel="noopener noreferrer" class="card-warm flex items-center gap-4 hover:shadow-lg transition-all duration-300 group">
+              <div class="w-12 h-12 rounded-xl bg-green-100 text-green-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </div>
+              <div>
+                <div class="text-sm text-text-muted">WhatsApp</div>
+                <div class="font-semibold text-text-primary group-hover:text-saffron-600 transition-colors">Chat with us</div>
+              </div>
+            </a>
+            <a href="mailto:business.jaimin1604@gmail.com" class="card-warm flex items-center gap-4 hover:shadow-lg transition-all duration-300 group">
+              <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              </div>
+              <div>
+                <div class="text-sm text-text-muted">Email</div>
+                <div class="font-semibold text-text-primary group-hover:text-saffron-600 transition-colors">business.jaimin1604@gmail.com</div>
+              </div>
+            </a>
+            <div class="card-accent">
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-saffron-200 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <div>
+                  <div class="font-semibold text-text-primary mb-1">Location</div>
+                  <div class="text-sm text-text-muted">Delhi, India<br>Online consultations available worldwide</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-saffron-200 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-saffron-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <div>
+                  <div class="font-semibold text-text-primary mb-1">Working Hours</div>
+                  <div class="text-sm text-text-muted">09:00 AM - 08:00 PM<br>Monday to Sunday</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 lg:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-saffron-100 via-saffron-50 to-earthy-100"></div>
+      <div class="absolute top-10 left-10 w-40 h-40 rounded-full bg-saffron-200 opacity-30 blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-saffron-300 opacity-20 blur-3xl"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center">
+          <h2 class="text-4xl sm:text-5xl font-semibold text-text-primary mb-6 leading-tight">
+            Ready to Bring Harmony
+            <span class="block text-saffron-600">to Your Space?</span>
+          </h2>
+          <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed">
+            Take the first step towards a more balanced, prosperous life. Book your free consultation today and discover how simple Vastu changes can make a big difference.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="https://wa.me/918200219142?text=Hi, I'm interested in Vastu consultation. I'd like to book a free consultation." target="_blank" rel="noopener noreferrer" class="btn-saffron text-base py-4 px-10">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp Consultation
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+            <a href="tel:+918200219142" class="btn-primary text-base py-4 px-10">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              Call: +91 8200219142
+            </a>
+          </div>
+          <p class="text-sm text-text-muted mt-6">Free initial consultation • No obligations • Response within 24 hours</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-text-primary text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-saffron-400 to-saffron-600 flex items-center justify-center">
+              <span class="text-white font-bold text-lg">O</span>
+            </div>
+            <span class="text-xl font-semibold">Orbital Vastu</span>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+            Bringing harmony and prosperity to homes and businesses through practical, easy-to-implement Vastu solutions.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://wa.me/918200219142" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-saffron-500 transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+            <a href="tel:+918200219142" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-saffron-500 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            </a>
+            <a href="mailto:business.jaimin1604@gmail.com" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-saffron-500 transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Services</a></li>
+            <li><a href="#about" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">About Us</a></li>
+            <li><a href="#process" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Process</a></li>
+            <li><a href="#contact" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Our Services</h4>
+          <ul class="space-y-3">
+            <li><a href="#services" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Home Vastu</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Office Vastu</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Shop Vastu</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Plot Analysis</a></li>
+            <li><a href="#services" class="text-gray-400 hover:text-saffron-400 transition-colors text-sm">Online Consultation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-saffron-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              <a href="tel:+918200219142" class="text-gray-300 hover:text-white transition-colors text-sm">+91 8200219142</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-saffron-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <a href="mailto:business.jaimin1604@gmail.com" class="text-gray-300 hover:text-white transition-colors text-sm break-all">business.jaimin1604@gmail.com</a>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-saffron-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <span class="text-gray-400 text-sm">Delhi, India</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-saffron-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <span class="text-gray-400 text-sm">09:00 AM - 08:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-gray-400 text-sm text-center md:text-left">© 2025 Orbital Vastu. All rights reserved.</p>
+          <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center gap-2 text-gray-400 hover:text-saffron-400 transition-colors text-sm">
+            Back to top
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-sm');
+        header.classList.remove('bg-transparent');
+      } else {
+        header.classList.remove('
