@@ -1,36 +1,24 @@
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
-
   try {
-    const { name, phone, city, propertyType, message } = req.body;
-
-    if (!name || !phone) {
-      return res.status(400).json({ error: "Name and phone are required" });
+    if (req.method !== "POST") {
+      return res.status(405).json({ message: "Method not allowed" });
     }
 
-    const payload = {
-      name,
-      phone,
-      city,
-      propertyType,
-      message,
-      timestamp: new Date().toISOString()
-    };
+    // ✅ Parse JSON body safely
+    const body = req.body;
 
-    const response = await fetch(process.env.SHEET_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+    if (!body || !body.name || !body.phone) {
+      return res.status(400).json({ message: "Invalid payload" });
+    }
+
+    console.log("Lead received:", body);
+
+    return res.status(200).json({
+      success: true,
+      message: "Lead submitted successfully",
     });
-
-    if (!response.ok) {
-      throw new Error("Failed to save data");
-    }
-
-    return res.status(200).json({ success: true });
   } catch (error) {
-    return res.status(500).json({ error: "Server error" });
+    console.error("Submit lead error:", error);
+    return res.status(500).json({ message: "Server error" });
   }
 }
