@@ -4,21 +4,23 @@ export default async function handler(req, res) {
       return res.status(405).json({ message: "Method not allowed" });
     }
 
-    // ✅ Parse JSON body safely
-    const body = req.body;
+    const { name, phone, city, propertyType, message } = req.body;
 
-    if (!body || !body.name || !body.phone) {
-      return res.status(400).json({ message: "Invalid payload" });
+    if (!name || !phone || !city || !propertyType) {
+      return res.status(400).json({ message: "Missing required fields" });
     }
 
-    console.log("Lead received:", body);
-
-    return res.status(200).json({
-      success: true,
-      message: "Lead submitted successfully",
+    console.log("Lead received:", {
+      name,
+      phone,
+      city,
+      propertyType,
+      message,
     });
-  } catch (error) {
-    console.error("Submit lead error:", error);
+
+    return res.status(200).json({ success: true });
+  } catch (err) {
+    console.error("Submit lead error:", err);
     return res.status(500).json({ message: "Server error" });
   }
 }
