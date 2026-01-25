@@ -980,66 +980,41 @@
   </footer>
 
   <script>
-  // Header scroll effect
-  window.addEventListener('scroll', function () {
-    const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-      header.classList.add('bg-white/95', 'backdrop-blur-lg', 'shadow-sm');
-      header.classList.remove('bg-transparent');
-    } else {
-      header.classList.remove('bg-white/95', 'backdrop-blur-lg', 'shadow-sm');
-      header.classList.add('bg-transparent');
-    }
-  });
-
-  // Contact form submission
-  async function handleSubmit(event) {
+  // Make handleSubmit GLOBAL
+  window.handleSubmit = async function (event) {
     event.preventDefault();
 
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const btnText = document.getElementById('btnText');
-    const successMessage = document.getElementById('successMessage');
+    const form = event.target;
+    const submitBtn = form.querySelector("button[type='submit']");
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
 
-    const formData = new FormData(form);
-
-    const payload = {
-      name: formData.get('name'),
-      phone: formData.get('phone'),
-      city: formData.get('city'),
-      propertyType: formData.get('propertyType'),
-      message: formData.get('message'),
+    const formData = {
+      name: form.name.value,
+      phone: form.phone.value,
+      city: form.city.value,
+      propertyType: form.propertyType.value,
+      message: form.message.value
     };
 
-    submitBtn.disabled = true;
-    btnText.textContent = 'Submitting...';
-
     try {
-      const response = await fetch('/api/submit-lead', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
+      const res = await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
       });
 
-      if (!response.ok) {
-        throw new Error('Submission failed');
-      }
+      if (!res.ok) throw new Error("Submission failed");
 
+      document.getElementById("successMessage").classList.remove("hidden");
       form.reset();
-      successMessage.classList.remove('hidden');
-
-      setTimeout(() => {
-        successMessage.classList.add('hidden');
-      }, 5000);
-    } catch (error) {
-      alert('Something went wrong. Please try again or call us directly.');
-      console.error(error);
+    } catch (err) {
+      alert("Something went wrong. Please try again.");
     } finally {
       submitBtn.disabled = false;
-      btnText.textContent = 'Submit Enquiry';
+      submitBtn.textContent = "Submit";
     }
-  }
+  };
 </script>
+
 
