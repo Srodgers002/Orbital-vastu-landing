@@ -980,11 +980,18 @@
   </footer>
 
   <script>
-  // Make handleSubmit GLOBAL
-  window.handleSubmit = async function (event) {
-    event.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
 
-    const form = event.target;
+  if (!form) {
+    console.error("contactForm not found");
+    return;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    console.log("FORM SUBMITTED");
+
     const submitBtn = form.querySelector("button[type='submit']");
     submitBtn.disabled = true;
     submitBtn.textContent = "Submitting...";
@@ -994,27 +1001,30 @@
       phone: form.phone.value,
       city: form.city.value,
       propertyType: form.propertyType.value,
-      message: form.message.value
+      message: form.message.value,
     };
 
     try {
       const res = await fetch("/api/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
+
+      console.log("FETCH STATUS:", res.status);
 
       if (!res.ok) throw new Error("Submission failed");
 
       document.getElementById("successMessage").classList.remove("hidden");
       form.reset();
     } catch (err) {
+      console.error(err);
       alert("Something went wrong. Please try again.");
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = "Submit";
+      submitBtn.textContent = "Submit Enquiry";
     }
-  };
+  });
+});
 </script>
-
 
