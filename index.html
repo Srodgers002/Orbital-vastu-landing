@@ -1005,7 +1005,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbw_yyNZHVC5q4j8infLrbvYspW8lEjkHHwDOkRRukukOxnKi1MkJufj5QbTY9Izgi3qFg/exec", {
+      const res = await fetch("/api/submit-lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
