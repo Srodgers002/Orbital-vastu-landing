@@ -1,0 +1,43 @@
+version: '3.9'
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - '3000:3000'
+    environment:
+      - NEXT_PUBLIC_API_BASE=http://localhost:8000/v1
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - '8000:8000'
+    env_file:
+      - backend/.env.example
+    volumes:
+      - chroma_data:/data/chroma
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: ai_portal
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./infra/schema.sql:/docker-entrypoint-initdb.d/init.sql
+
+  redis:
+    image: redis:7
+    ports:
+      - '6379:6379'
+
+volumes:
+  pg_data:
+  chroma_data:
